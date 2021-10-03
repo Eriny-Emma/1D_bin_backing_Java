@@ -1,35 +1,32 @@
 import java.io.*;
 
 public class CSVWriter {
-    public static String file_name ="testNEWall_take2.csv";
+    public static String file_name ;
     public static void header()
     {
         try (PrintWriter writer = new PrintWriter(new FileWriter(new File(file_name), true))) {
 
             StringBuilder sb = new StringBuilder();
-            sb.append("id"); //0
+
+            sb.append("type"); //0
             sb.append(',');
-            sb.append("type"); //1
+            sb.append("number of bins"); //1
             sb.append(',');
-            sb.append("no. of threads"); // 2
+            sb.append("total spaces"); // 2
             sb.append(',');
-            sb.append("number of bins"); //3
+            sb.append("average waste"); // 3
             sb.append(',');
-            sb.append("total spaces"); // 4
+            sb.append("time"); ///4
             sb.append(',');
-            sb.append("average waste"); // 5
+            sb.append("bin Capacity"); ///5
             sb.append(',');
-            sb.append("time"); ///6
-            sb.append(',');
-            sb.append("bin Capacity"); ///7
-            sb.append(',');
-            sb.append("number of objects"); ///8
+            sb.append("number of objects"); ///6
             sb.append('\n');
 
 
             writer.write(sb.toString());
 
-            System.out.println("writing headers");
+          //  System.out.println("writing headers");
 
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
@@ -54,7 +51,7 @@ public class CSVWriter {
 
             writer.write(sb.toString());
 
-            System.out.println("writing data");
+         //   System.out.println("writing data");
 
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());

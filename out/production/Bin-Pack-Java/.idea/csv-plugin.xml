@@ -234,6 +234,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\testNEWall.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
