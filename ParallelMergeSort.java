@@ -7,6 +7,8 @@ public class ParallelMergeSort {
     public static void parallelMergeSort(double[] array) {
         SortTask mainTask = new SortTask(array); //// the action class
         ForkJoinPool pool = new ForkJoinPool();  //// the pool
+        //System.out.println(""+pool.getParallelism());
+
         pool.invoke(mainTask);                   //// pool invoke action
     }
 
