@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class CSVWriter {
-    public static String file_name ="testNEWall.csv";
+    public static String file_name ="testNEWall_take2.csv";
     public static void header()
     {
         try (PrintWriter writer = new PrintWriter(new FileWriter(new File(file_name), true))) {
